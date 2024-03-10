@@ -17,16 +17,22 @@
 
 section {
   position: relative;
+  margin: 0 60px;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
   margin: 0 30px;
   overflow: hidden;
 }
 
-section .header-img {
+header .header-img {
   width: 100%;
   height: calc(100vh - 110px);
 }
 
-section .header-img img {
+header .header-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -35,7 +41,7 @@ section .header-img img {
   border-radius: 15px;
 }
 
-section .header-container {
+header .header-container {
   position: absolute;
   z-index: 999;
   top: 10%;
@@ -43,20 +49,20 @@ section .header-container {
   font-family: var(--main-font);
 }
 
-section .header-container h1 {
+header .header-container h1 {
   font-size: clamp(62px, 5vw, 78px);
   font-weight: 500;
   color: var(--third-color);
 }
 
-section .header-container p {
+header .header-container p {
   font-size: 20px;
   font-weight: 300;
   color: var(--third-color);
   padding-top: 20px;
 }
 
-section .header-container .section-btn {
+header.header-container .section-btn {
   position: relative;
   display: grid;
   place-items: center;
@@ -67,14 +73,14 @@ section .header-container .section-btn {
   background-color: var(--third-color);
 }
 
-section .header-container .section-btn a {
+header .header-container .section-btn a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   color: var(--primary-color);
 }
 
-section .header-additional {
+header .header-additional {
   position: absolute;
   bottom: 10%;
   right: 5%;
@@ -87,7 +93,7 @@ section .header-additional {
   border-radius: 15px;
 }
 
-section .header-additional .text {
+header .header-additional .text {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -96,30 +102,30 @@ section .header-additional .text {
   font-family: var(--main-font);
 }
 
-section .header-additional .text h4 {
+header .header-additional .text h4 {
   font-size: 22px;
   font-weight: 400;
 }
 
-section .header-additional .text p {
+header .header-additional .text p {
   font-size: 18px;
   font-weight: 300;
   color: var(--third-color);
 }
 
-section .header-additional .bg {
+header .header-additional .bg {
   max-width: 100%;
   height: auto;
 }
 
-section .header-additional .bg img {
+header .header-additional .bg img {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0 15px 15px 0;
 }
 
-section .header-social {
+header .header-social {
   position: absolute;
   bottom: 45%;
   right: 5%;
@@ -130,11 +136,11 @@ section .header-social {
   gap: 15px;
 }
 
-section .header-social a {
+header .header-social a {
   cursor: pointer;
 }
 
-section .header-social a i {
+header .header-social a i {
   color: var(--third-color);
 }
 
@@ -395,19 +401,20 @@ section .feedback-item .card {
   border: 1px solid var(--primary-color);
   border-radius: 15px;
   padding: 20px;
+  gap: 30px;
 }
 
 section .feedback-item .card p {
   font-size: 20px;
   font-weight: 400;
   color: var(--forth-color);
-  margin-bottom: 40px;
 }
 
 section .feedback-item .card .user-details {
-  display: grid;
-  grid-template-columns: repeat(2, 15% 85%);
-  place-items: center start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
   width: 100%;
 }
 
@@ -429,9 +436,9 @@ section .feedback-item .card .user-details .img img {
 
 section .feedback-item .card .user-details .desc {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-items: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 section .feedback-item .card .user-details .desc h4 {

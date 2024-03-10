@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Homepage</title>
 </head>
 <body>
     <?php
-        include_once "navbar.php";
+        include_once "includes/navbar.php";
     ?>
 
     <!-- header section -->
-    <section>
+    <header>
         <div class="header-img">
             <img src="https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?" alt="background img">
         </div>
@@ -38,7 +42,7 @@
             <a href="#"><i class='bx bxl-twitter bx-sm'></i></a>
             <a href="#"><i class='bx bxl-facebook-circle bx-sm'></i></a>
         </div>
-    </section>
+    </header>
 
     <!-- service section !-->
     <section>
@@ -194,25 +198,27 @@
         </div>
         <div class="feedback-item">
             <div class="card">
-                <p>"Booking with Go Travel was a breeze! Their team helped me plan an  amazing trip, and I couldn't be happier with the experience. Can't wait  for my next adventure with them!"</p>
+                <p>"Booking with GoTravel was a breeze! Their team helped me plan an  amazing trip, and I couldn't be happier with the experience. Can't wait  for my next adventure with them!"</p>
                 <div class="user-details">
                     <div class="img">
                         <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?" alt="user img">
                     </div>
                     <div class="desc">
                         <h4>Sarah Johson</h4>
+                        <p>Silver plan</p>
                     </div>
                 </div>  
             </div>
 
             <div class="card">
-                <p>"Booking with Go Travel was a breeze! Their team helped me plan an  amazing trip, and I couldn't be happier with the experience. Can't wait  for my next adventure with them!"</p>
+                <p>"I've been using GoTravel for several years, and they never disappoint. From their expert recommendations to their easy booking process, every trip with them has been fantastic."</p>
                 <div class="user-details">
                     <div class="img">
-                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?" alt="user img">
+                        <img src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?" alt="user img">
                     </div>
                     <div class="desc">
-                        <h4>Sarah Johson</h4>
+                        <h4>Michael Smith</h4>
+                        <p>Gold plan</p>
                     </div>
                 </div>  
             </div>
@@ -238,7 +244,7 @@
     </section>
 
     <?php
-        include_once "footer.php";
+        include_once "includes/footer.php";
     ?>
 </body>
 </html>
