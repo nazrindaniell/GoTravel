@@ -28,6 +28,11 @@ nav .nav-logo h1 {
   font-weight: 600;
 }
 
+nav .nav-logo h1 a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 nav .nav-links > ul {
   text-decoration: none;
   list-style: none;

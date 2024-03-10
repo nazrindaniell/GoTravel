@@ -70,9 +70,9 @@
                 <div class="hero-information">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="../index.php">Home</a></li>
                         <li><a href="#">Tours</a></li>
-                        <li><a href="#">Membership</a></li>
+                        <li><a href="../php/membership.php">Membership</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>

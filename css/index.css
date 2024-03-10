@@ -43,7 +43,7 @@ header .header-img img {
 
 header .header-container {
   position: absolute;
-  z-index: 999;
+  z-index: 1;
   top: 10%;
   left: 5%;
   font-family: var(--main-font);
@@ -62,7 +62,7 @@ header .header-container p {
   padding-top: 20px;
 }
 
-header.header-container .section-btn {
+header .header-container .section-btn {
   position: relative;
   display: grid;
   place-items: center;
@@ -233,13 +233,19 @@ section .item-container h2 {
 }
 
 section .item-container .item-btn {
-  padding: 15px 35px;
-  border: 1px solid var(--primary-color);
+  padding: 15px 40px;
   border-radius: 10px;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgba(131, 111, 255, 1), rgba(198, 33, 229, 1))
+      border-box;
+  border-radius: 15px;
+  border: 2px solid transparent;
 }
 
 section .item-container .item-btn a {
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
   color: var(--primary-color);
 }
 

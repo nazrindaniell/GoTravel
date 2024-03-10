@@ -9,12 +9,13 @@
 <body>
      <nav>
         <div class="nav-logo">
-            <h1>GoTravel.</h1>
+            <h1><a href="../index.php">GoTravel.</a></h1>
         </div>
         <div class="nav-links">
             <ul>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="#">Tours</a></li>
-                <li><a href="#">Membership</a></li>
+                <li><a href="../php/membership.php">Membership</a></li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact</a></li>
