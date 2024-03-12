@@ -1,0 +1,237 @@
+:root {
+  --primary-color: #1a1e18;
+  --secondary-color: #fff;
+  --third-color: #f4f4f4;
+  --forth-color: #646464;
+  --fifth-color: #969696;
+  --sixth-color: #dadada;
+  --seventh-color: #d8d8d8;
+  --main-font: "Cina GEO Test";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+section {
+  position: relative;
+  margin: 0 30px;
+  overflow: hidden;
+}
+
+section .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: calc(100lvh - 110px);
+}
+
+section .login-container .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 55% 45%);
+  width: 100%;
+  height: 100%;
+}
+
+section .login-container .grid .left-wrapper {
+  display: grid;
+  place-content: center;
+  align-items: center;
+  width: 100%; /* 49% for 720p screen before break*/
+  grid-gap: 60px;
+  height: calc(100lvh - 110px);
+}
+
+section .login-container .grid .left-wrapper .login-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--main-font);
+}
+
+section .login-container .grid .left-wrapper .login-title h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding-bottom: 15px;
+}
+
+section .login-container .grid .left-wrapper .login-title p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--fifth-color);
+}
+
+section .login-container .grid .left-wrapper form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+section .login-container .grid .left-wrapper form .form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+section .login-container .grid .left-wrapper form .form-wrapper label {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--main-font);
+  color: var(--primary-color);
+}
+
+section .login-container .grid .left-wrapper form .form-wrapper input {
+  width: 100%;
+  height: 55px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid var(--seventh-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--fifth-color);
+}
+
+section .login-container .grid .left-wrapper form .form-submit {
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
+section .login-container .grid .left-wrapper form .form-submit input {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+section .login-container .grid .left-wrapper p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--main-font);
+}
+
+section .login-container .grid .left-wrapper p span {
+  font-weight: 500;
+}
+
+section .login-container .grid .left-wrapper p span a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+section .login-container .grid .right-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100lvh - 110px);
+  font-family: var(--main-font);
+}
+
+section .login-container .grid .right-wrapper .bg-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section .login-container .grid .right-wrapper .bg-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center left;
+  filter: brightness(80%);
+  border-radius: 15px;
+}
+
+section .login-container .grid .right-wrapper .quote {
+  position: absolute;
+  bottom: 7%;
+  left: 58%;
+  font-family: var(--main-font);
+  text-align: left;
+}
+
+section .login-container .grid .right-wrapper .quote h2 {
+  font-size: 54px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+section .login-container .grid .right-wrapper .quote p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--third-color);
+  max-width: 300px;
+  line-height: 28px;
+}
+
+section .login-container .grid .right-wrapper .brand {
+  position: absolute;
+  left: 58%;
+  top: 7%;
+  color: var(--secondary-color);
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--secondary-color);
+  max-width: 4%;
+}
+
+section .login-container .grid .right-wrapper .brand h4 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1366px) {
+  /* media queries for left grid */
+  section .login-container .grid .left-wrapper {
+    grid-gap: 30px;
+  }
+  section .login-container .grid .left-wrapper .login-title h2 {
+    font-size: 38px;
+    padding-bottom: 10px;
+  }
+  section .login-container .grid .left-wrapper .login-title p {
+    font-size: 18px;
+  }
+  section .login-container .grid .left-wrapper form {
+    gap: 10px;
+  }
+  section .login-container .grid .left-wrapper form .form-wrapper input {
+    height: 50px;
+  }
+  section .login-container .grid .left-wrapper form .form-submit {
+    height: 50px;
+  }
+  /* media queries for right grid */
+  section .login-container .grid .right-wrapper .quote h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+  section .login-container .grid .right-wrapper .quote p {
+    max-width: 350px;
+    line-height: 28px;
+  }
+  section .login-container .grid .right-wrapper .brand {
+    padding-bottom: 10px;
+  }
+  section .login-container .grid .right-wrapper .brand h4 {
+    font-size: 20px;
+  }
+}

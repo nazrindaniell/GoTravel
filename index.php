@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="../css/index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Homepage</title>
+    <title>Home </title>
 </head>
 <body>
     <?php
@@ -186,7 +186,7 @@
             <h2>Travel with membership benefits</h2>
             <p>Join our community of travelers and enjoy exclusive perks with our  membership <br>program. Whether you're a seasoned explorer or embarking on  your first adventure, <br>becoming a member of Go Travel Sdn Bhd opens the  door to a world of possibilities.</p>
             <div class="membership-btn">
-                <a href="#">Learn more</a>
+                <a href="../php/membership.php">Learn more</a>
             </div>
         </div>
     </section>

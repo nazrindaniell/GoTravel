@@ -1,0 +1,282 @@
+:root {
+  --primary-color: #1a1e18;
+  --secondary-color: #fff;
+  --third-color: #f4f4f4;
+  --forth-color: #646464;
+  --fifth-color: #969696;
+  --sixth-color: #dadada;
+  --seventh-color: #d8d8d8;
+  --main-font: "Cina GEO Test";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+section {
+  position: relative;
+  margin: 0 60px;
+  overflow: hidden;
+}
+
+section .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 120px 0;
+}
+
+section .about-container .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 1440px;
+  gap: 50px;
+  row-gap: 120px;
+}
+
+section .about-container .grid .about-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-family: var(--main-font);
+}
+
+section .about-container .grid .about-us-section .contact-btn {
+  margin-top: 35px;
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+section .about-container .grid .about-us-section .contact-btn a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+section .about-container .grid .about-us-section h2 {
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+section .about-container .grid .about-us-section p {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--forth-color);
+  line-height: 28px;
+}
+
+section .about-container .grid .about-us-section .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 35px;
+  width: 60%;
+}
+
+@media screen and (max-width: 1366px) {
+  section .about-container .grid .about-us-section .grid-wrapper {
+    width: 70%;
+  }
+}
+
+section
+  .about-container
+  .grid
+  .about-us-section
+  .grid-wrapper
+  .info:nth-child(1) {
+  border-right: 1px solid var(--fifth-color);
+  width: 100%;
+}
+
+section
+  .about-container
+  .grid
+  .about-us-section
+  .grid-wrapper
+  .info:nth-last-child(1) {
+  margin-left: 15%;
+  width: 100%;
+}
+
+section .about-container .grid .about-img {
+  max-width: 100%;
+  height: auto;
+}
+
+section .about-container .grid .about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 15px;
+}
+
+/* our values section */
+
+section .values-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--main-font);
+}
+
+section .values-container h2 {
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+section .values-container .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1440px;
+  gap: 30px;
+  place-items: center;
+}
+
+section .values-container .grid .card {
+  width: 250px;
+  height: 320px;
+  border: 1px solid var(--seventh-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+section .values-container .grid .card .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+section .values-container .grid .card .logo i {
+  color: var(--primary-color);
+}
+
+section .values-container .grid .card .logo h4 {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+section .values-container .grid .card .logo p {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--forth-color);
+  text-align: center;
+}
+
+/* feedback section */
+section .feedback-container {
+  max-width: 1440px;
+  margin: 100px auto 40px auto;
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+section .feedback-container h2 {
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+section .feedback-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  max-width: 1150px;
+  margin: 0 auto 100px auto;
+  place-items: center;
+  font-family: var(--main-font);
+}
+
+section .feedback-item .card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 20px;
+  gap: 30px;
+}
+
+section .feedback-item .card p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--forth-color);
+}
+
+section .feedback-item .card .user-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+section .feedback-item .card .user-details .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+section .feedback-item .card .user-details .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+section .feedback-item .card .user-details .desc {
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+section .feedback-item .card .user-details .desc h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+section .feedback-item .quote-icon {
+  display: grid;
+  align-self: start;
+  font-size: 80px;
+  position: absolute;
+  bottom: 90%;
+  right: -7%;
+  color: var(--seventh-color);
+}
+
+@media screen and (max-width: 1366px) {
+  section .feedback-item .quote-icon {
+    display: none;
+  }
+  section .feedback-item .quote-icon i {
+    display: none;
+  }
+}

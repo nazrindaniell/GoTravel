@@ -17,14 +17,14 @@
                 <li><a href="#">Tours</a></li>
                 <li><a href="../php/membership.php">Membership</a></li>
                 <li><a href="#">Forum</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="../php/about.php">About us</a></li>
+                <li><a href="../php/contact.php">Contact</a></li>
             </ul>
         </div>
         <div class="nav-button">
-            <a href="#">Log in</a>
+            <a href="../php/login.php">Log in</a>
             <div class="nav-signup">
-                <a href="#">Sign up</a>
+                <a href="../php/signup.php">Sign up</a>
             </div>
         </div>
      </nav>

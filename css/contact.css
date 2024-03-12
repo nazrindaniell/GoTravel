@@ -1,0 +1,286 @@
+:root {
+  --primary-color: #1a1e18;
+  --secondary-color: #fff;
+  --third-color: #f4f4f4;
+  --forth-color: #646464;
+  --fifth-color: #969696;
+  --sixth-color: #dadada;
+  --seventh-color: #d8d8d8;
+  --main-font: "Cina GEO Test";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+section {
+  position: relative;
+  margin: 0 60px;
+  overflow: hidden;
+}
+
+section .contact-container {
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 30px 0;
+}
+
+section .contact-container .grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 40% 60%);
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+section .contact-container .grid .left-content {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  background-color: var(--primary-color);
+  border-radius: 15px 0 0 15px;
+}
+
+section .contact-container .grid .left-content .header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--main-font);
+}
+
+section .contact-container .grid .left-content .header h2 {
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+section .contact-container .grid .left-content .header p {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+section .contact-container .grid .left-content .contact-information {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  height: auto;
+}
+
+section .contact-container .grid .left-content .contact-information .box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 70px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+section .contact-container .grid .left-content .contact-information .box i {
+  color: var(--secondary-color);
+}
+
+section .contact-container .grid .left-content .contact-information .box p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+section .contact-container .grid .left-content .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+section .contact-container .grid .left-content .social-media .circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+
+section .contact-container .grid .left-content .social-media .circle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* media queries for left grid */
+@media screen and (max-width: 1366px) {
+  section .contact-container .grid .left-content {
+    padding: 30px;
+  }
+  section .contact-container .grid .left-content .header {
+    gap: 5px;
+  }
+  section .contact-container .grid .left-content .header h2 {
+    font-size: 40px;
+  }
+  section .contact-container .grid .left-content .header p {
+    font-size: 18px;
+  }
+  section .contact-container .grid .left-content .contact-information {
+    gap: 15px;
+  }
+  section .contact-container .grid .left-content .contact-information .box {
+    height: 60px;
+  }
+  section .contact-container .grid .left-content .contact-information .box p {
+    font-size: 18px;
+  }
+  section .contact-container .grid .left-content .social-media {
+    gap: 10px;
+  }
+  section .contact-container .grid .left-content .social-media .circle {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* right content */
+section .contact-container .grid .right-content {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 60px;
+}
+
+section .contact-container .grid .right-content form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+section .contact-container .grid .right-content form .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  width: 100%;
+}
+
+section .contact-container .grid .right-content form .wrapper .group {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: var(--main-font);
+  gap: 10px;
+}
+
+section .contact-container .grid .right-content form .wrapper .group label {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+section .contact-container .grid .right-content form .wrapper .group input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-bottom: 1px solid var(--forth-color);
+}
+
+section
+  .contact-container
+  .grid
+  .right-content
+  form
+  .wrapper
+  .group
+  input[type="text"] {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--forth-color);
+}
+
+section
+  .contact-container
+  .grid
+  .right-content
+  form
+  .wrapper
+  .group
+  input[type="email"] {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--forth-color);
+}
+
+section
+  .contact-container
+  .grid
+  .right-content
+  form
+  .wrapper
+  > .group:last-of-type {
+  grid-column: span 2;
+}
+
+section .contact-container .grid .right-content form .round {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--main-font);
+}
+
+section .contact-container .grid .right-content form .round label {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.checkbox-round {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid var(--forth-color);
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: var(--primary-color);
+}
+
+section .contact-container .grid .right-content form input[type="submit"] {
+  background: none;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 35px;
+  background-color: var(--primary-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
