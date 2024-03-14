@@ -180,6 +180,7 @@ section .contact-container .grid .right-content form .wrapper {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 50px;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 section .contact-container .grid .right-content form .wrapper .group {
@@ -201,7 +202,26 @@ section .contact-container .grid .right-content form .wrapper .group input {
   width: 100%;
   height: 45px;
   border: none;
-  border-bottom: 1px solid var(--forth-color);
+  border-bottom: 1px solid var(--sixth-color);
+  outline: none;
+}
+
+.invalid-feedback {
+  margin-left: 5px;
+  color: red;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+section
+  .contact-container
+  .grid
+  .right-content
+  form
+  .wrapper
+  .group
+  input:focus {
+  border-bottom: 1px solid var(--primary-color);
 }
 
 section
@@ -240,38 +260,6 @@ section
   grid-column: span 2;
 }
 
-section .contact-container .grid .right-content form .round {
-  margin: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  font-family: var(--main-font);
-}
-
-section .contact-container .grid .right-content form .round label {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--primary-color);
-}
-
-.checkbox-round {
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border-radius: 50%;
-  vertical-align: middle;
-  border: 2px solid var(--forth-color);
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.checkbox-round:checked {
-  background-color: var(--primary-color);
-}
-
 section .contact-container .grid .right-content form input[type="submit"] {
   background: none;
   border: none;
@@ -291,15 +279,17 @@ section .contact-container .grid .right-content form input[type="submit"] {
     height: calc(100vh - 120px);
   }
   section .contact-container .grid .right-content {
-    padding: 30px;
+    padding: 40px;
   }
   section .contact-container .grid .right-content form .wrapper {
     grid-gap: 30px;
   }
-  section .contact-container .grid .right-content form .wrapper .group input {
-    height: 30px;
+
+  section .contact-container .grid .right-content form .wrapper .group {
+    gap: 15px;
   }
-  section .contact-container .grid .right-content form .round {
-    margin: 30px 0;
+
+  section .contact-container .grid .right-content form .wrapper .group input {
+    height: 40px;
   }
 }

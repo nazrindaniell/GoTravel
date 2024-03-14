@@ -62,6 +62,16 @@ nav .nav-button {
   font-weight: 300;
 }
 
+nav .nav-button .username {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+}
+
+nav .nav-button .username p {
+  color: var(--secondary-color);
+}
+
 nav .nav-button a {
   color: var(--primary-color);
   text-decoration: none;
@@ -75,4 +85,8 @@ nav .nav-button .nav-signup {
 
 nav .nav-button .nav-signup a {
   color: var(--secondary-color);
+}
+
+nav .nav-button .logout a i {
+  color: var(--primary-color);
 }

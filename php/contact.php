@@ -1,3 +1,97 @@
+<?php
+    require_once "dbconnect.php";
+    session_start();
+
+    //define variables and initialize with empty values
+    $fname = $lname = $email = $phone = $message = "";
+    $fnameErr = $lnameErr = $emailErr = $phoneErr = $messageErr = "";
+
+    //check if the user is logged in
+    if(isset($_SESSION['id'])){
+        $user_id = $_SESSION['id'];
+
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            //validate first name
+            if(empty(trim($_POST['fname']))){
+                $fnameErr = "required";
+            }
+            else{
+                $fname = $_POST['fname'];
+            }
+
+            //validate last name
+            if(empty(trim($_POST['lname']))){
+                $lnameErr = "required";
+            }
+            else{
+                $lname = $_POST['lname'];
+            }
+
+            //validate email
+            if(empty(trim($_POST['email']))){
+                $emailErr = "required";
+            }
+            else{
+                $email = trim($_POST['email']);
+                if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                    $emailErr = "Invalid email format";
+                }
+            }
+
+            //validate phone number
+            if(empty($_POST['phone'])){
+                $phoneErr = "required";
+            }
+            else{
+                $phone = trim($_POST['phone']);
+                if(!preg_match('/^[0-9]{10}+$/', $phone)) {
+                    $phoneErr = "Invalid phone number format";
+                }
+            }
+
+            //validate message
+            if(empty($_POST['message'])){
+                $messageErr = "required";
+            }
+            else{
+                $message = $_POST['message'];
+            }
+
+            //check input errors before inserting into the database
+            if(empty($fnameErr) && empty($lnameErr) && empty($emailErr) && empty($phoneErr) && empty($messageErr)){
+                // Create a prepared statement
+                $stmtQuery = "INSERT INTO form (user_id, firstName, lastName, email, phoneNumber, message) VALUES (?, ?, ?, ?, ?, ?)";
+                $stmt = mysqli_prepare($conn, $stmtQuery);
+
+                // Bind parameters
+                mysqli_stmt_bind_param($stmt, "isssss", $user_id, $fname, $lname, $email, $phone, $message);
+
+                // Execute the statement
+                if(mysqli_stmt_execute($stmt)) {
+                    echo "Form submitted successfully!";
+                } else {
+                    echo "Error: " . mysqli_error($conn);
+                }
+
+                // Close the statement
+                mysqli_stmt_close($stmt);
+            }
+        }
+        //close the connection
+        mysqli_close($conn);
+    }
+    else{
+        //user is not logged in
+        //redirect to login page
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            if(!isset($_SESSION['id'])){
+                header("Location: ../php/login.php");
+                exit();
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,34 +146,30 @@
                 </div>
                 <div class="right-content">
                     <div>
-                        <form action="" method="POST">
+                        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST">
                             <div class="wrapper">
                                 <div class="group">
-                                    <label for="fname">First name</label>
-                                    <input type="text" name="fname" placeholder="Nazrin">
+                                    <label for="fname">First name <span class="invalid-feedback"><?php echo $fnameErr;?></span></label>
+                                    <input type="text" name="fname" placeholder="Alex" class="form-control <?php echo (!empty($fnameErr)) ? 'is-invalid' : ''; ?>" value="<?php echo $fname; ?>">
                                 </div>
                                 <div class="group">
-                                    <label for="lname">Last name</label>
-                                    <input type="text" name="lname" placeholder="Daniel">
+                                    <label for="lname">Last name <span class="invalid-feedback"><?php echo $lnameErr;?></span></label>
+                                    <input type="text" name="lname" placeholder="Turner" class="form-control <?php echo (!empty($lnameErr)) ? 'is-invalid' : ''; ?>" value="<?php echo $lname; ?>">
                                 </div>
                                 <div class="group">
-                                    <label for="email">Email address</label>
-                                    <input type="email" name="email" placeholder="example@gmail.com">
+                                    <label for="email">Email address <span class="invalid-feedback"><?php echo $emailErr;?></span></label>
+                                    <input type="email" name="email" placeholder="example@gmail.com" class="form-control <?php echo (!empty($emailErr)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
                                 </div>
                                 <div class="group">
-                                    <label for="number">Phone number</label>
-                                    <input type="text" name="number" placeholder="+60123456789">
+                                    <label for="phone">Phone number <span class="invalid-feedback"><?php echo $phoneErr;?></span></label>
+                                    <input type="text" name="phone" placeholder="0123456789" class="form-control <?php echo (!empty($phoneErr)) ? 'is-invalid' : ''; ?>" value="<?php echo $phone; ?>">
                                 </div>
                                 <div class="group">
-                                    <label for="message">Message</label>
-                                    <input type="text" name="message" placeholder="Write your message...">
+                                    <label for="message">Message <span class="invalid-feedback"><?php echo $messageErr;?></span></label>
+                                    <input type="text" name="message" placeholder="Write your message..." class="form-control <?php echo (!empty($messageErr)) ? 'is-invalid' : ''; ?>" value="<?php echo $message; ?>">
                                 </div>
                             </div>
-                            <div class="round">
-                                <input type="checkbox" name="checkbox" class="checkbox-round">
-                                <label for="checkbox">I confirm all the information stated are true</label>
-                            </div>
-                            <input type="submit" value="Send Message">
+                            <input type="submit" name="submit" value="Send Message">
                         </form>
                     </div>
                 </div>

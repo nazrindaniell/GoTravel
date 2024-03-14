@@ -13,7 +13,9 @@
 </head>
 <body>
     <?php
-        include_once "includes/navbar.php";
+        session_start();
+        require("../php/dbconnect.php");
+        include_once "../includes/navbar.php";
     ?>
 
     <!-- header section -->
@@ -151,7 +153,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="card">
                 <img src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?" alt="card img">
                 <div class="card-desc">
@@ -244,7 +246,7 @@
     </section>
 
     <?php
-        include_once "includes/footer.php";
+        include_once "../includes/footer.php";
     ?>
 </body>
 </html>
