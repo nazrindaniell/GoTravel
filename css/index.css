@@ -280,32 +280,38 @@ section .item-list {
   margin: auto;
 }
 
-section .item-list .card {
+section .item-list a {
   width: 100%;
   height: auto;
   border: 1px solid var(--sixth-color);
   border-radius: 15px;
+  text-decoration: none;
 }
 
-section .item-list .card img {
+section .item-list a .card {
+  width: 100%;
+  height: 100%;
+}
+
+section .item-list a .card img {
   width: 100%;
   height: 300px;
   border-radius: 15px 15px 0 0;
 }
 
-section .item-list .card .card-desc {
+section .item-list a .card .card-desc {
   padding: 15px;
   font-family: var(--main-font);
 }
 
-section .item-list .card .card-desc h4 {
+section .item-list a .card .card-desc h4 {
   font-size: 28px;
   font-weight: 500;
   padding-bottom: 10px;
   color: var(--primary-color);
 }
 
-section .item-list .card .card-desc .desc {
+section .item-list a .card .card-desc .desc {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -314,19 +320,20 @@ section .item-list .card .card-desc .desc {
   color: var(--fifth-color);
 }
 
-section .item-list .card .card-desc .price {
+section .item-list a .card .card-desc .price {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-top: 15px;
 }
 
-section .item-list .card .card-desc .price h3 {
+section .item-list a .card .card-desc .price h3 {
   font-size: 28px;
   font-weight: 500;
+  color: var(--primary-color);
 }
 
-section .item-list .card .card-desc .price p {
+section .item-list a .card .card-desc .price p {
   font-size: 20px;
   font-weight: 400;
   color: var(--fifth-color);

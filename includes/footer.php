@@ -71,7 +71,7 @@
                     <h4>Links</h4>
                     <ul>
                         <li><a href="../php/index.php">Home</a></li>
-                        <li><a href="#">Tours</a></li>
+                        <li><a href="../php/package.php">Tours</a></li>
                         <li><a href="../php/membership.php">Membership</a></li>
                         <li><a href="#">Forum</a></li>
                         <li><a href="../php/about.php">About</a></li>

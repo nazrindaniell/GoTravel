@@ -15,12 +15,12 @@
 <body>
      <nav>
         <div class="nav-logo">
-            <h1><a href="../index.php">GoTravel.</a></h1>
+            <h1><a href="../php/index.php">GoTravel.</a></h1>
         </div>
         <div class="nav-links">
             <ul>
                 <li><a href="../php/index.php">Home</a></li>
-                <li><a href="#">Tours</a></li>
+                <li><a href="../php/package.php">Tours</a></li>
                 <li><a href="../php/membership.php">Membership</a></li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="../php/about.php">About us</a></li>

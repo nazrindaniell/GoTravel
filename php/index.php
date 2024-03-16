@@ -1,3 +1,42 @@
+<?php
+//connect with the database
+require("../php/dbconnect.php");
+
+// Function to retrieve all packages with their associated images from the database
+function getAllPackagesWithImages($conn){
+    $sql = "SELECT p.*, i.image_path, i.alt_text FROM packages p LEFT JOIN packages_image i ON p.package_id = i.package_id";
+    $result = mysqli_query($conn, $sql);
+    $packages = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $packageId = $row['package_id'];
+        if (!isset($packages[$packageId])) {
+            // Initialize package array
+            $packages[$packageId] = array(
+                'package_id' => $packageId,
+                'package_name' => $row['package_name'],
+                'rating' => $row['rating'],
+                'reviews' => $row['reviews'],
+                'location' => $row['location'],
+                'duration' => $row['duration'],
+                'price' => $row['price'],
+                'images' => array()
+            );
+        }
+        // Add image to package
+        if ($row['image_path']) {
+            $packages[$packageId]['images'][] = array(
+                'image_path' => $row['image_path'],
+                'alt_text' => $row['alt_text']
+            );
+        }
+    }
+    return $packages;
+}
+
+// Retrieve all packages with their associated images from the database
+$packages = getAllPackagesWithImages($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,101 +120,40 @@
         <div class="item-container">
             <h2>Select your trip</h2>
             <div class="item-btn">
-                <a href="#">See more</a>
+                <a href="../php/package.php">See more</a>
             </div>
         </div>
         <div class="item-list">
-            <div class="card">
-                <img src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?" alt="card img">
-                <div class="card-desc">
-                    <h4>Japan</h4>
-                    <div class="desc">
-                        <i class='bx bx-star bx-sm'></i>
-                        <p>4.8 (24 Reviews)</p>
+            <?php foreach ($packages as $package): ?>
+                <a href="packageDetails.php?package_id=<?= $package['package_id'] ?>" class="card-link">
+                    <div class="card">
+                        <?php if(!empty($package['images'])): ?>
+                            <div class="images">
+                                <img src="<?= $package['images'][0]['image_path'] ?>" alt="<?= $package['images'][0]['alt_text'] ?>">
+                            </div>
+                        <?php endif; ?>
+                        <div class="card-desc">
+                            <h4><?= $package['package_name'] ?></h4>
+                            <div class="desc">
+                                <i class='bx bx-star bx-sm'></i>
+                                <p><?= $package['rating'] ?> (<?= $package['reviews'] ?> Reviews)</p>
+                            </div>
+                            <div class="desc">
+                                <i class='bx bx-map bx-sm'></i>
+                                <p><?= $package['location'] ?></p>
+                            </div>
+                            <div class="desc">
+                                <i class='bx bx-calendar bx-sm'></i>
+                                <p><?= $package['duration'] ?></p>
+                            </div>
+                            <div class="price">
+                                <h3>RM <?= $package['price'] ?></h3>
+                                <p>/person</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="desc">
-                        <i class='bx bx-map bx-sm'></i>
-                        <p>Tokyo,Japan</p>
-                    </div>
-                    <div class="desc">
-                        <i class='bx bx-calendar bx-sm'></i>
-                        <p>4 Days, 3 Nights</p>
-                    </div>
-                    <div class="price">
-                        <h3>RM 200</h3>
-                        <p>/person</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?" alt="card img">
-                <div class="card-desc">
-                    <h4>Japan</h4>
-                    <div class="desc">
-                        <i class='bx bx-star bx-sm'></i>
-                        <p>4.8 (24 Reviews)</p>
-                    </div>
-                    <div class="desc">
-                        <i class='bx bx-map bx-sm'></i>
-                        <p>Tokyo,Japan</p>
-                    </div>
-                    <div class="desc">
-                        <i class='bx bx-calendar bx-sm'></i>
-                        <p>4 Days, 3 Nights</p>
-                    </div>
-                    <div class="price">
-                        <h3>RM 200</h3>
-                        <p>/person</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?" alt="card img">
-                <div class="card-desc">
-                    <h4>Japan</h4>
-                    <div class="desc">
-                        <i class='bx bx-star bx-sm'></i>
-                        <p>4.8 (24 Reviews)</p>
-                    </div>
-                    <div class="desc">
-                        <i class='bx bx-map bx-sm'></i>
-                        <p>Tokyo,Japan</p>
-                    </div>
-                    <div class="desc">
-                        <i class='bx bx-calendar bx-sm'></i>
-                        <p>4 Days, 3 Nights</p>
-                    </div>
-                    <div class="price">
-                        <h3>RM 200</h3>
-                        <p>/person</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <img src="https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?" alt="card img">
-                <div class="card-desc">
-                    <h4>Japan</h4>
-                    <div class="desc">
-                        <i class='bx bx-star bx-sm'></i>
-                        <p>4.8 (24 Reviews)</p>
-                    </div>
-                    <div class="desc">
-                        <i class='bx bx-map bx-sm'></i>
-                        <p>Tokyo,Japan</p>
-                    </div>
-                    <div class="desc">
-                        <i class='bx bx-calendar bx-sm'></i>
-                        <p>4 Days, 3 Nights</p>
-                    </div>
-                    <div class="price">
-                        <h3>RM 200</h3>
-                        <p>/person</p>
-                    </div>
-                </div>
-            </div>
+                </a>
+            <?php endforeach; ?>
         </div>
     </section>
 
