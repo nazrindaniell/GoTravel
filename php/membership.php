@@ -17,7 +17,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://js.stripe.com/v3/"></script>
     <title>Membership</title>
 </head>
 <body>
@@ -78,7 +77,7 @@
                 </div>
                 <div class="membership-btn-2">
                     <?php if($isLoggedin): ?>
-                        <a href="https://buy.stripe.com/test_7sIaFachG4Qta9WdQR">Go Premium</a>
+                        <a href="https://buy.stripe.com/test_14k28EgxW82Feqc4gk">Go Premium</a>
                     <?php else: ?>
                         <a href="../php/login.php">Go Premium</a>
                     <?php endif; ?>
@@ -114,7 +113,7 @@
                 </div>
                 <div class="membership-btn-2">
                     <?php if ($isLoggedin): ?>  
-                        <a href="https://buy.stripe.com/test_dR6eVq0yY96J95S3ce">Go Premium</a>
+                        <a href="https://buy.stripe.com/test_cN214AbdCbeRdm8dQT">Go Premium</a>
                     <?php else: ?>
                         <a href="../php/login.php">Go Premium</a>
                     <?php endif; ?>

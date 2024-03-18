@@ -22,7 +22,6 @@
                 <li><a href="../php/index.php">Home</a></li>
                 <li><a href="../php/package.php">Tours</a></li>
                 <li><a href="../php/membership.php">Membership</a></li>
-                <li><a href="#">Forum</a></li>
                 <li><a href="../php/about.php">About us</a></li>
                 <li><a href="../php/contact.php">Contact</a></li>
             </ul>

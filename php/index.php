@@ -66,7 +66,7 @@ $packages = getAllPackagesWithImages($conn);
             <h1>Explore the World's <br>Wonders</h1>
             <p>Your gateway to global exploration with GoTravel.</p>
             <div class="section-btn">
-                <a href="#">Start exploring</a>
+                <a href="../php/about.php">Start exploring</a>
             </div>
         </div>
         <div class="header-additional">
