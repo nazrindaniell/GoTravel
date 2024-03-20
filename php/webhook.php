@@ -1,8 +1,9 @@
 <?php 
     require_once "../vendor/autoload.php";
+    require_once "../php/secrets.php";
     // Set your secret key. Remember to switch to your live secret key in production.
     // See your keys here: https://dashboard.stripe.com/apikeys
-    \Stripe\Stripe::setApiKey('sk_test_51Ov0X0K2XupZuyoVwbzYkvpVdOanvyBNTHdUMRha1FztrbnKnvHcp2dMaDQCDHKALwJ8hnFk4nSlFYbTFQaUupgC007Y4A7nxJ');
+    \Stripe\Stripe::setApiKey($stripeSecretKey);
 
     // You can find your endpoint's secret in your webhook settings
     $endpoint_secret = 'whsec_d0b20243ecfb3f97e34734bf9c7fb245d5fd3cc048ff90c5165b6fc9b5f0539a';

@@ -134,7 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <div class="right-wrapper">
                     <div class="bg-img">
-                        <img src="https://images.pexels.com/photos/5480833/pexels-photo-5480833.jpeg?" alt="login img">
+                        <img src="https://images.pexels.com/photos/5480833/pexels-photo-5480833.jpeg" alt="login img">
                     </div>
                     <div class="quote">
                         <h2>Embark on <br>your journey</h2>

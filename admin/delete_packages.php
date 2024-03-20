@@ -1,6 +1,6 @@
 <?php
 // Include your database connection file
-include 'dbconnect.php';
+include '../php/dbconnect.php';
 
 // Function to retrieve all package names along with their IDs
 function getAllPackageNames($conn) {

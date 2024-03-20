@@ -60,7 +60,7 @@ $packages = getAllPackagesWithImages($conn);
     <!-- header section -->
     <header>
         <div class="header-img">
-            <img src="https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?" alt="background img">
+            <img src="https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg" alt="background img">
         </div>
         <div class="header-container">
             <h1>Explore the World's <br>Wonders</h1>
@@ -75,7 +75,7 @@ $packages = getAllPackagesWithImages($conn);
                 <p>Argentina</p>
             </div> 
             <div class="bg">
-                <img src="https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg?" alt="img">
+                <img src="https://images.pexels.com/photos/4275885/pexels-photo-4275885.jpeg" alt="img">
             </div>
         </div>
         <div class="header-social">
@@ -160,7 +160,7 @@ $packages = getAllPackagesWithImages($conn);
     <!-- membership section -->
     <section>
         <div class="membership-img">
-            <img src="https://images.pexels.com/photos/571169/pexels-photo-571169.jpeg?" alt="membership img">
+            <img src="https://images.pexels.com/photos/571169/pexels-photo-571169.jpeg" alt="membership img">
         </div>
         <div class="membership-container">
             <h2>Travel with membership benefits</h2>
@@ -181,7 +181,7 @@ $packages = getAllPackagesWithImages($conn);
                 <p>"Booking with GoTravel was a breeze! Their team helped me plan an  amazing trip, and I couldn't be happier with the experience. Can't wait  for my next adventure with them!"</p>
                 <div class="user-details">
                     <div class="img">
-                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?" alt="user img">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="user img">
                     </div>
                     <div class="desc">
                         <h4>Sarah Johson</h4>
@@ -194,7 +194,7 @@ $packages = getAllPackagesWithImages($conn);
                 <p>"I've been using GoTravel for several years, and they never disappoint. From their expert recommendations to their easy booking process, every trip with them has been fantastic."</p>
                 <div class="user-details">
                     <div class="img">
-                        <img src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?" alt="user img">
+                        <img src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg" alt="user img">
                     </div>
                     <div class="desc">
                         <h4>Michael Smith</h4>

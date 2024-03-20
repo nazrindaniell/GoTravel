@@ -174,7 +174,7 @@
                 </div>
                 <div class="right-wrapper">
                     <div class="bg-img">
-                        <img src="https://images.pexels.com/photos/5480833/pexels-photo-5480833.jpeg?" alt="signup img">
+                        <img src="https://images.pexels.com/photos/5480833/pexels-photo-5480833.jpeg" alt="signup img">
                     </div>
                     <div class="quote">
                         <h2>Embark on <br>your journey</h2>

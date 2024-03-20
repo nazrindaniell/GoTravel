@@ -6,7 +6,9 @@
 
     include "../php/dbconnect.php";
     require_once '../vendor/autoload.php';
-    $stripe = new \Stripe\StripeClient('sk_test_51Ov0X0K2XupZuyoVwbzYkvpVdOanvyBNTHdUMRha1FztrbnKnvHcp2dMaDQCDHKALwJ8hnFk4nSlFYbTFQaUupgC007Y4A7nxJ');
+    require_once '../php/secrets.php';
+
+    $stripe = new \Stripe\StripeClient($stripeSecretKey);
 
     try {
       $session = $stripe->checkout->sessions->retrieve($_GET['session_id']);
