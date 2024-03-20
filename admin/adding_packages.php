@@ -103,22 +103,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="hidden" name="package_id" value="<?php echo isset($_POST['select_package']) ? $_POST['select_package'] : ''; ?>">
     
     <label for="package_name">Package Name:</label>
-    <input type="text" name="package_name" value="<?php echo isset($packageDetails['package_name']) ? $packageDetails['package_name'] : ''; ?>" required><br>
+    <input type="text" name="package_name" value="<?php echo isset($packageDetails['package_name']) ? $packageDetails['package_name'] : ''; ?>" required> VARCHAR<br>
     
     <label for="rating">Rating:</label>
-    <input type="text" name="rating" value="<?php echo isset($packageDetails['rating']) ? $packageDetails['rating'] : ''; ?>" required><br>
+    <input type="text" name="rating" value="<?php echo isset($packageDetails['rating']) ? $packageDetails['rating'] : ''; ?>" required> DECIMAL(3,1)<br>
     
     <label for="reviews">Reviews:</label>
-    <input type="text" name="reviews" value="<?php echo isset($packageDetails['reviews']) ? $packageDetails['reviews'] : ''; ?>" required><br>
+    <input type="text" name="reviews" value="<?php echo isset($packageDetails['reviews']) ? $packageDetails['reviews'] : ''; ?>" required> INT<br>
     
     <label for="location">Location:</label>
-    <input type="text" name="location" value="<?php echo isset($packageDetails['location']) ? $packageDetails['location'] : ''; ?>" required><br>
+    <input type="text" name="location" value="<?php echo isset($packageDetails['location']) ? $packageDetails['location'] : ''; ?>" required> VARCHAR<br>
     
     <label for="duration">Duration:</label>
-    <input type="text" name="duration" value="<?php echo isset($packageDetails['duration']) ? $packageDetails['duration'] : ''; ?>" required><br>
+    <input type="text" name="duration" value="<?php echo isset($packageDetails['duration']) ? $packageDetails['duration'] : ''; ?>" required> VARCHAR<br>
     
     <label for="price">Price:</label>
-    <input type="text" name="price" value="<?php echo isset($packageDetails['price']) ? $packageDetails['price'] : ''; ?>" required><br>
+    <input type="text" name="price" value="<?php echo isset($packageDetails['price']) ? $packageDetails['price'] : ''; ?>" required> DECIMAL(10,2)<br>
     <!-- Add more fields for package details -->
 
     <input type="submit" name="add_package" value="Add Package">
