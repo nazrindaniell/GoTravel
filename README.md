@@ -5,8 +5,8 @@
   <br>
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nazrindaniell/GoTravel">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/nazrindaniell/GoTravel">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nazrindaniell/GoTravel">
   <img alt="GitHub forks" src="https://img.shields.io/github/forks/nazrindaniell/GoTravel">
+  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/nazrindaniell/GoTravel">
   <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/zinniel_">  
 </div>
 <br>
@@ -112,4 +112,7 @@ If you want to say thank you and/or support the active development of GemaLoka:
 
 1. Add a [GitHub Star](https://github.com/nazrindaniell/GemaLoka) to the project.
 2. Support the project by donating a [cup of coffee](https://www.buymeacoffee.com/nazrindaniell).
-   <br>
+<br><br>
+
+## :bust_in_silhouette: Author
+If you have any inquiries, feel free to leave me a message at nazrindaniel8@gmail.com
