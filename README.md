@@ -1,12 +1,12 @@
 <div align="center">
   <img alt="GoTravel Logo" src="https://github.com/nazrindaniell/GoTravel/assets/79645841/47d8c1f4-d397-4009-8242-709ba14fc29e">
-  <h3>Membership travelling agency website</h3>
+  <h3>Membership travel agency website</h3>
   <p>GoTravel is a travel agency membership website that aims to convert users to loyal customers by offering a variety of membership plans with benefits to choose from.</p>
   <br>
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/nazrindaniell/GoTravel">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/nazrindaniell/GoTravel">
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/nazrindaniell/GoTravel">
-  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/nazrindaniell/GoTravel">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/nazrindaniell/GoTravel">
   <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/zinniel_">  
 </div>
 <br>
