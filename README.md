@@ -65,14 +65,14 @@ Open XAMPP and START the following:
 - `Apache`
 - `MySQL`
 
-### Create database
+### Create a database
 
 1. Open the browser and type `localhost/phpmyadmin`
 2. Create a new database and name it `gotravel`, and then click `CREATE` to create a database.
 3. `Navigate to SQL` and paste this [queries](https://github.com/nazrindaniell/GoTravel/files/14664669/gotravel.tables.txt)
 
 > [!IMPORTANT]
-> When naming the database, make sure it is `gotravel`, or if you want to use your preferred database name, you need to configure the `dbname` variable in the `/php/dbconnect.php` file to your database name in `localhost/phpmyadmin`.
+> When naming the database, make sure it is `gotravel`, or if you want to use your preferred database name, you need to configure the `dbname` variable in the `php/dbconnect.php` file to your database name in `localhost/phpmyadmin`.
 
 ```php
 <?php
@@ -92,6 +92,23 @@ Open XAMPP and START the following:
 
 ## :clipboard: How to Use
 
+### Create your Stripe account
+1. Go to the [Stripe](https://stripe.com/en-my) website and register if you don't have one.
+2. On the dashboard page, turn on the `Test mode` to safely make transactions in the testing environment.
+> [!NOTE]
+> By enabling the `Test mode`, you're using test data and real money won't be charged.
+3. Click on the `Developers` section and find the `API keys`.
+4. Copy the `Secret key` and paste it into the `php/secrets.php` file:
+```php
+<?php
+$stripeSecretKey = 'PASTE YOUR SECRET KEY IN THIS STRING';
+?>
+```
+> [!IMPORTANT]
+> Make sure not to reveal your `Secret key` to the public, as it is only accessible to your Stripe account.
+
+---
+
 ### Add/edit a tour package
 
 1. On the browser, navigate to `localhost/GoTravel/admin/adding_packages.php`
@@ -100,10 +117,12 @@ Open XAMPP and START the following:
 > Make sure to enter each input's package details with the appropriate datatype.
 3. To edit an existing tour package, go to the top drop-down menu and select the `Edit Selected Package` button. After editing, click the `Edit Package` button to save the edited package to the database.
 
+---
+
 ### Delete a tour package
 
-1. Navigate to `localhost/GoTravel/admin/delete_packages.php`
-2. Select a ticket that you want to delete
+1. Navigate to `localhost/GoTravel/admin/delete_packages.php`.
+2. Select a ticket that you want to delete.
 3. Click the `Delete Selected Package` button to delete the package.
 <br><br>
 
