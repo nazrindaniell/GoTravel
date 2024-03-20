@@ -15,7 +15,7 @@
 ## :scroll: Project Description
 
 This project aims to use the Stripe API for membership transactions when users want to upgrade from their current plans to higher plans while maintaining the interface's aesthetics.
-
+<br><br>
 ### Here are some of the things that I learned and implemented throughout the creation of this project
 
 :wrench: `Make use of the Stripe API` to handle the transaction
@@ -35,6 +35,7 @@ This project aims to use the Stripe API for membership transactions when users w
   <li><img alt="Static Badge" src="https://img.shields.io/badge/PHP-%23000?style=for-the-badge&logo=PHP&logoColor=%23777BB4&labelColor=%23fff&color=%23777BB4"></li>
   <li><img alt="Static Badge" src="https://img.shields.io/badge/MySQL-white?style=for-the-badge&logo=MySQL&logoColor=%234479A1&labelColor=%23fff&color=%234479A1">
 </ul>
+<br>
 
 ## :camera: Screenshots
 ![home page](https://github.com/nazrindaniell/GoTravel/assets/79645841/92ba751d-a047-4f23-b176-69b056d1f7af)
